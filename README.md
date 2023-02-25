@@ -36,5 +36,6 @@ To start the webserver, execute the jar, by running the following
 ```
 java -jar WeatherAPI-0.0.1-SNAPSHOT.jar
 ```
+Pass API key for Open cage API as environment variable.
 A Tomcat Server should spin up and start listening for requests on port 8080
 
