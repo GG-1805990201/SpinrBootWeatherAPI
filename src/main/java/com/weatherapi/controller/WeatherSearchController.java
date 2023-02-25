@@ -18,6 +18,7 @@ public class WeatherSearchController {
     private AccuWeatherClient accuWeatherClient;
 
     /**
+     * Method used to get current date in "yyyy-MM-dd" format .
      * @return
      */
     public static String getCurrentDate() {
@@ -28,6 +29,7 @@ public class WeatherSearchController {
     }
 
     /**
+     * Fetches weather details using City name , Latitude & Longitude and Pincode.
      * @param input
      * @return
      * @throws IOException
@@ -38,6 +40,7 @@ public class WeatherSearchController {
     }
 
     /**
+     * Fetches weather details for n days from particular date.
      * @param input
      * @param days
      * @param date
@@ -51,6 +54,7 @@ public class WeatherSearchController {
     }
 
     /**
+     * Fetches weather details using address as input.
      * @param address
      * @return
      * @throws IOException
@@ -63,6 +67,7 @@ public class WeatherSearchController {
     }
 
     /**
+     * Method used to fetch response from HTTP client.
      * @param input
      * @param eventAction
      * @param days

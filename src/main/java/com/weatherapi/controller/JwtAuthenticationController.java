@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Objects;
 
+/**
+ * Endpoint for token based authentication
+ */
 @RestController
 @CrossOrigin
 public class JwtAuthenticationController {
