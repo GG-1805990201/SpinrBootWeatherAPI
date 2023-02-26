@@ -40,5 +40,5 @@ Pass API key for Open cage API as environment variable.
 
 api_key=9df551d9b73743dd94fdac2ea461e1fe
 
-A Tomcat Server should spin up and start listening for requests on port 8080
+A Tomcat Server should spin up and start listening for requests on port 8081
 
