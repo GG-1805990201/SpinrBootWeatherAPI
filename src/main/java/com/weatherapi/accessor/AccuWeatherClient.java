@@ -36,7 +36,7 @@ public class AccuWeatherClient {
         Request request = new Request.Builder()
                 .url(weatherURL)
                 .get()
-                .addHeader("X-RapidAPI-Key", "11f02f1ca5msh8bf3d300dfc67dep125fe9jsn18ebc0cf38f0")
+                .addHeader("X-RapidAPI-Key", System.getenv("X-RapidAPI-Key"))
                 .addHeader("X-RapidAPI-Host", "weatherapi-com.p.rapidapi.com")
                 .build();
 
