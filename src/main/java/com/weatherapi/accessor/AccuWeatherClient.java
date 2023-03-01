@@ -67,7 +67,7 @@ public class AccuWeatherClient {
         Request request = new Request.Builder()
                 .url(weatherURL)
                 .get()
-                .addHeader("X-RapidAPI-Key", "11f02f1ca5msh8bf3d300dfc67dep125fe9jsn18ebc0cf38f0")
+                .addHeader("X-RapidAPI-Key", System.getenv("X-RapidAPI-Key"))
                 .addHeader("X-RapidAPI-Host", "weatherapi-com.p.rapidapi.com")
                 .build();
 
@@ -81,7 +81,7 @@ public class AccuWeatherClient {
      * @return
      */
     public String getGeolocationKey(String address) {
-        JOpenCageGeocoder jOpenCageGeocoder = new JOpenCageGeocoder("9df551d9b73743dd94fdac2ea461e1fe");
+        JOpenCageGeocoder jOpenCageGeocoder = new JOpenCageGeocoder(System.getenv("api_key"));
         JOpenCageForwardRequest request = new JOpenCageForwardRequest(address);
         JOpenCageResponse response = jOpenCageGeocoder.forward(request);
         JOpenCageLatLng firstResultLatLng = response.getFirstPosition(); // get the coordinate pair of the first result
