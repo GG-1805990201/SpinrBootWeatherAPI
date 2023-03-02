@@ -36,7 +36,7 @@ public class WeatherSearchController {
      */
     @RequestMapping(value = "/getWeather", method = RequestMethod.GET, produces = "application/json")
     public String getCurrentWeatherByCity(@RequestParam String input) throws IOException {
-        return getResponseforWeather(input, "current", 1, getCurrentDate().toString());
+        return getResponseforWeather(input, "current", 1, getCurrentDate());
     }
 
     /**
