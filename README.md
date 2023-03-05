@@ -8,9 +8,12 @@ The authentication for the application is handled using JWTs. All incoming reque
 ## API Endpoints
 | HTTP Verb | Endpoints | Action |
 |  :---:         |     :---:      |           :---: |
-| GET     | /getWeather         | Fetch weather details using Location key, City and Pincode    |
-| GET     | /getForecast        | Fetch weather forecast for n days using Location key, City and Pincode       |
-| GET     | /getWeatherNearestCity       | Fetch weather details using address      |
+| POST     | /createTask      | Post Endpoint to create task and saving to database.    |
+| GET     | /getAllTasks        | Get Endpoint to fetch all tasks from DB       |
+| GET     | /getTaskById       | Get Endpoint to fetch task for the given TaskId      |
+| PUT     | /updateTaskById       | Put endpoint to update the existing task attributes for the given taskId.      |
+| GET     | /getAuditDetails       | Get Endpoint to fetch AuditDetails for the given taskId.    |
+| DELETE     | /deleteTaskById       | Delete endpoint which deletes the particular task with taskId as input.      |
 
 ## Testing
 The APIs can be tested by running the spring application, by building and executing the project jar.
@@ -26,7 +29,7 @@ mvn clean package
 ```
 If the build succeeds, a jar file in ./target directory should be created.
 
-> Example : WeatherAPI-0.0.1-SNAPSHOT.jar
+> Example : taskmanager 0.0.1-SNAPSHOT.jar
 
 If the build has succeeded, you can proceed to next step, i.e. starting the web server
 
@@ -34,11 +37,8 @@ If the build has succeeded, you can proceed to next step, i.e. starting the web 
 To start the webserver, execute the jar, by running the following
 
 ```
-java -jar WeatherAPI-0.0.1-SNAPSHOT.jar
+java -jar taskmanager 0.0.1-SNAPSHOT.jar
 ```
-Pass API key for Open cage API as environment variable.
 
-api_key=9df551d9b73743dd94fdac2ea461e1fe
-
-A Tomcat Server should spin up and start listening for requests on port 8081
+A Tomcat Server should spin up and start listening for requests on port 6060
 
